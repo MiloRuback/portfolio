@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BuildX — Design System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    .font-geist { font-family: 'Geist', sans-serif !important; }
+    .font-geist-mono { font-family: 'Geist Mono', monospace !important; }
+    html, body { height: 100%; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background-color: #030712;
+      color: #ffffff;
+    }
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(30px); filter: blur(8px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+    }
+    @keyframes marquee-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .tab-active {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-full antialiased selection:bg-black selection:text-white xl:bg-gray-950 text-white bg-gray-950 flex flex-col">
+
+  <!-- Principal Animated Background (UnicornStudio from Overview) -->
+  <div class="aura-background-component top-0 w-full h-screen -z-10 hue-rotate-15 fixed pointer-events-none">
+    <div class="aura-background-component top-0 w-full -z-10 absolute h-full">
+      <div data-us-project="vRUeei6AVOtWgmHT28mN" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+      <script type="text/javascript">
+        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+      </script>
+    </div>
+  </div>
+
+  <!-- Source Navbar Reused -->
+  <header class="sticky z-50 xl:bg-black bg-black/70 border-gray-800 border-b top-0 backdrop-blur-xl">
+    <div class="sm:px-8 sm:pt-2 sm:pb-2 max-w-7xl mr-auto ml-auto pt-2 pr-6 pb-2 pl-6">
+      <div class="flex gap-4 h-16 items-center justify-between">
+        <div class="flex items-center gap-4">
+          <a href="#overview" class="inline-flex items-center justify-center bg-center mix-blend-screen w-[48px] h-[48px] bg-[url(https://cdn.midjourney.com/3f5c16da-080f-427f-a80d-ee75c8f5a173/0_0.png?w=800&amp;q=80)] bg-cover rounded invert" aria-label="BuildX"></a>
+          <span class="text-sm font-medium tracking-tight text-white">BuildX <span class="text-white/50 font-normal">Design System</span></span>
+        </div>
+
+        <nav class="flex items-center gap-2" aria-label="Design System Views">
+          <a id="tab-overview" href="#overview" class="text-sm px-4 py-2 rounded-xl border border-transparent transition text-white/70 hover:text-white hover:bg-white/5">
+            Overview
+          </a>
+          <a id="tab-components" href="#components" class="text-sm px-4 py-2 rounded-xl border border-transparent transition text-white/70 hover:text-white hover:bg-white/5">
+            Components
+          </a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="../index.html" class="inline-flex transition hover:bg-white/10 text-xs text-white/70 hover:text-white bg-white/5 h-9 border-white/10 border rounded-lg pr-3 pl-3 items-center justify-center gap-1.5">
+            <span>Portfólio Milo Ruback</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- View 1: Overview (Borderless Iframe) -->
+  <main id="view-overview" class="flex-1 w-full">
+    <iframe
+      id="overview-frame"
+      src="./assets/overview/index.html?embedded=1"
+      title="BuildX Design System Overview"
+      class="w-full h-[calc(100vh-81px)] border-0 block bg-gray-950"
+    ></iframe>
+  </main>
+
+  <!-- View 2: Components -->
+  <main id="view-components" class="hidden max-w-7xl mx-auto w-full px-6 sm:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-10 items-start">
+      <!-- Sticky Left Sidebar -->
+      <aside class="lg:sticky lg:top-28 rounded-2xl bg-gray-900/60 border border-white/10 backdrop-blur p-3">
+        <nav class="flex lg:flex-col gap-1 overflow-x-auto text-sm">
+          <a href="#ds-backgrounds" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Backgrounds</a>
+          <a href="#ds-typography" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Typography</a>
+          <a href="#ds-colors" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Colors</a>
+          <a href="#ds-surfaces" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Surfaces</a>
+          <a href="#ds-icons" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Icons</a>
+          <a href="#ds-actions" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Actions</a>
+          <a href="#ds-navigation" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Navigation</a>
+          <a href="#ds-inputs" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Inputs and Search</a>
+          <a href="#ds-cards" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Cards and Containers</a>
+          <a href="#ds-timeline" class="px-3 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/5 transition whitespace-nowrap">Timeline and Marquee</a>
+        </nav>
+      </aside>
+
+      <!-- Stacked Component Groups -->
+      <div class="space-y-16 min-w-0">
+
+        <!-- Backgrounds -->
+        <section id="ds-backgrounds" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Backgrounds</h2>
+
+          <div class="space-y-4">
+            <div class="rounded-3xl border border-white/10 overflow-hidden relative h-72 bg-gray-950">
+              <div class="aura-background-component w-full h-full hue-rotate-15 relative">
+                <div data-us-project="vRUeei6AVOtWgmHT28mN" class="absolute inset-0 w-full h-full"></div>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-black/70 border border-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                <span class="text-sm font-medium text-white">UnicornStudio WebGL Aura Background</span>
+                <code class="text-xs font-geist-mono text-white/60">.aura-background-component · data-us-project="vRUeei6AVOtWgmHT28mN"</code>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-white/10 overflow-hidden relative h-48 bg-gray-950 flex items-end p-4">
+              <div class="absolute top-[-30%] left-1/2 -translate-x-1/2 h-[320px] w-[700px] rounded-full blur-3xl opacity-30" style="background: radial-gradient(600px 300px at 50% 30%, rgb(17, 24, 39) 10%, rgb(156, 163, 175) 40%, transparent 70%);"></div>
+              <div class="relative z-10 w-full flex items-center justify-between bg-black/70 border border-white/10 backdrop-blur rounded-xl px-4 py-2.5">
+                <span class="text-sm font-medium text-white">Base Canvas + Ambient Radial Glow</span>
+                <code class="text-xs font-geist-mono text-white/60">bg-gray-950 (#030712)</code>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Typography -->
+        <section id="ds-typography" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Typography</h2>
+
+          <div class="divide-y divide-white/10 rounded-3xl bg-gray-900/60 border border-white/10 backdrop-blur px-6">
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Hero Display</p>
+                <p class="text-xs text-white/50">Inter · 500</p>
+                <code class="text-[11px] font-geist-mono text-white/40">tracking-tighter</code>
+              </div>
+              <div class="text-4xl sm:text-5xl font-medium text-white tracking-tighter leading-[1.02]">BuildX Design System</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">6rem | 4.5rem | 3rem</div>
+            </div>
+
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Section Heading</p>
+                <p class="text-xs text-white/50">Inter · 500</p>
+                <code class="text-[11px] font-geist-mono text-white/40">text-4xl sm:text-5xl</code>
+              </div>
+              <div class="text-3xl sm:text-4xl font-medium text-white tracking-tighter">Lorem ipsum dolor sit amet</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">3rem | 2.25rem</div>
+            </div>
+
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Lead Copy</p>
+                <p class="text-xs text-white/50">Inter · 500</p>
+                <code class="text-[11px] font-geist-mono text-white/40">text-xl sm:text-2xl</code>
+              </div>
+              <div class="text-xl font-medium text-white/60 tracking-tight leading-relaxed">Consectetur adipiscing elit, sed do eiusmod tempor.</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">1.5rem | 1.25rem</div>
+            </div>
+
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Card Title</p>
+                <p class="text-xs text-white/50">Inter / Geist · 600</p>
+                <code class="text-[11px] font-geist-mono text-white/40">text-[18px]</code>
+              </div>
+              <div class="text-[18px] font-semibold tracking-tight text-white">Lorem ipsum dolor sit amet</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">18px</div>
+            </div>
+
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Body &amp; Nav</p>
+                <p class="text-xs text-white/50">Inter · 400</p>
+                <code class="text-[11px] font-geist-mono text-white/40">text-sm</code>
+              </div>
+              <div class="text-sm text-white/70">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">0.875rem</div>
+            </div>
+
+            <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr_140px] gap-4 items-center">
+              <div>
+                <p class="text-sm font-medium text-white">Badge &amp; Meta</p>
+                <p class="text-xs text-white/50">Inter / Geist · 500</p>
+                <code class="text-[11px] font-geist-mono text-white/40">text-xs</code>
+              </div>
+              <div class="text-xs text-white/70">Lorem ipsum · ⌘K</div>
+              <div class="text-xs font-geist-mono text-white/60 md:text-right">0.75rem</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Colors -->
+        <section id="ds-colors" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Colors</h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-gray-950 border border-white/10"></div>
+              <p class="text-sm font-medium text-white">Primary Page Canvas</p>
+              <code class="text-xs font-geist-mono text-white/60">#030712 · bg-gray-950</code>
+              <p class="text-xs text-white/50">Root body &amp; input background</p>
+            </div>
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-gray-900/60 border border-white/10 backdrop-blur"></div>
+              <p class="text-sm font-medium text-white">Elevated Glass Panel</p>
+              <code class="text-xs font-geist-mono text-white/60">rgba(17,24,39,0.6) · bg-gray-900/60</code>
+              <p class="text-xs text-white/50">Showcase containers &amp; cards</p>
+            </div>
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-black/70 border border-gray-800 backdrop-blur-xl"></div>
+              <p class="text-sm font-medium text-white">Sticky Header Surface</p>
+              <code class="text-xs font-geist-mono text-white/60">rgba(0,0,0,0.7) · bg-black/70</code>
+              <p class="text-xs text-white/50">Top navigation bar &amp; search shell</p>
+            </div>
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-white/5 border border-white/10"></div>
+              <p class="text-sm font-medium text-white">Glass Pill &amp; CTA Fill</p>
+              <code class="text-xs font-geist-mono text-white/60">rgba(255,255,255,0.05) · bg-white/5</code>
+              <p class="text-xs text-white/50">Buttons, badges, and overlay chips</p>
+            </div>
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-gradient-to-r from-emerald-400 via-indigo-400 to-purple-400"></div>
+              <p class="text-sm font-medium text-white">Timeline Accent Spectrum</p>
+              <code class="text-xs font-geist-mono text-white/60">#34d399 → #818cf8 → #c084fc</code>
+              <p class="text-xs text-white/50">Vertical step rail and status nodes</p>
+            </div>
+            <div class="rounded-2xl bg-gray-900/60 border border-white/10 p-4 space-y-3">
+              <div class="h-14 rounded-xl bg-gray-950 flex items-center justify-around px-3 border border-white/10">
+                <span class="text-xs text-white">100%</span>
+                <span class="text-xs text-white/70">70%</span>
+                <span class="text-xs text-white/50">50%</span>
+              </div>
+              <p class="text-sm font-medium text-white">Text Hierarchy</p>
+              <code class="text-xs font-geist-mono text-white/60">#ffffff · rgba(255,255,255,0.7/0.5)</code>
+              <p class="text-xs text-white/50">Headings, nav, and secondary copy</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Surfaces -->
+        <section id="ds-surfaces" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Surfaces</h2>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-gray-900/60 border-white/10 border rounded-3xl p-6 backdrop-blur">
+              <p class="text-sm font-medium text-white">Section Container</p>
+              <code class="text-xs font-geist-mono text-white/50 block mt-2">bg-gray-900/60 border-white/10 border rounded-3xl backdrop-blur</code>
+            </div>
+            <div class="bg-gray-950/60 ring-gray-800 ring-1 rounded-2xl p-6">
+              <p class="text-sm font-medium text-white">Toolbar Inset Shell</p>
+              <code class="text-xs font-geist-mono text-white/50 block mt-2">bg-gray-950/60 ring-gray-800 ring-1 rounded-2xl</code>
+            </div>
+          </div>
+        </section>
+
+        <!-- Icons -->
+        <section id="ds-icons" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Icons</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur text-center">
+            <div class="flex flex-col items-center gap-2 text-white/80">
+              <i data-lucide="search" class="w-5 h-5"></i>
+              <code class="text-xs font-geist-mono text-white/50">search</code>
+            </div>
+            <div class="flex flex-col items-center gap-2 text-white/80">
+              <i data-lucide="play-circle" class="w-5 h-5"></i>
+              <code class="text-xs font-geist-mono text-white/50">play-circle</code>
+            </div>
+            <div class="flex flex-col items-center gap-2 text-white/80">
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              <code class="text-xs font-geist-mono text-white/50">arrow-right</code>
+            </div>
+            <div class="flex flex-col items-center gap-2 text-white/80">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              <code class="text-xs font-geist-mono text-white/50">chevron-right</code>
+            </div>
+            <div class="flex flex-col items-center gap-2 text-white/80">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+              <code class="text-xs font-geist-mono text-white/50">eye</code>
+            </div>
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <section id="ds-actions" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Actions</h2>
+          <div class="flex flex-wrap items-center gap-4 rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur">
+            <button class="group inline-flex min-w-[140px] cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:text-white overflow-hidden font-semibold text-white/70 tracking-tight bg-white/5 border-white/10 border rounded-xl pt-[12px] pr-[20px] pb-[12px] pl-[20px] relative shadow-[0_2.8px_2.2px_rgba(0,0,0,0.3),_0_6.7px_5.3px_rgba(0,0,0,0.35),_0_12.5px_10px_rgba(0,0,0,0.4)] items-center justify-center">
+              <span class="relative z-10 font-medium transition-all duration-500 ease-out group-hover:translate-y-8 group-hover:opacity-0 group-hover:blur-md">Primary action</span>
+              <span class="z-10 flex items-center justify-center transition-all duration-300 ease-in-out transform -translate-y-8 group-hover:translate-y-0 group-hover:opacity-100 group-hover:blur-none font-medium opacity-0 absolute inset-0 blur-md">Primary action</span>
+              <span aria-hidden="true" class="absolute bottom-0 left-1/2 h-[1px] w-[70%] -translate-x-1/2 transition-all duration-[1000ms] group-hover:opacity-80 bg-gradient-to-r from-transparent via-white/40 to-transparent blur-[2px]"></span>
+              <span aria-hidden="true" class="absolute inset-0 group-hover:opacity-60 transition-all duration-[1000ms] pointer-events-none bg-gradient-to-t from-white/10 via-white/5 to-transparent"></span>
+            </button>
+
+            <a href="#ds-actions" class="inline-flex items-center gap-2 transition min-w-[120px] justify-center hover:bg-white/10 hover:text-white font-normal text-white/70 bg-white/5 border-white/10 border rounded-xl pt-[12px] pr-[20px] pb-[12px] pl-[20px]">
+              Secondary action
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+            </a>
+
+            <button class="inline-flex ring-inset transition text-sm font-medium text-white bg-gray-900 ring-gray-700 ring-1 rounded-xl pt-2 pr-3 pb-2 pl-3 items-center">
+              Active Chip
+            </button>
+            <button class="inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium ring-1 ring-inset transition bg-gray-900/50 text-gray-300 ring-gray-800 hover:text-white">
+              Default Chip
+            </button>
+          </div>
+        </section>
+
+        <!-- Navigation -->
+        <section id="ds-navigation" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Navigation</h2>
+          <div class="rounded-2xl bg-black/70 border border-gray-800 backdrop-blur-xl px-6 h-16 flex items-center justify-between">
+            <span class="text-sm font-medium text-white">Brand Mark</span>
+            <nav class="flex items-center gap-8">
+              <span class="text-sm text-white">Active Link</span>
+              <span class="text-sm text-white/60">Nav Link</span>
+              <span class="text-sm text-white/60">Nav Link</span>
+            </nav>
+            <span class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white/70">Action</span>
+          </div>
+        </section>
+
+        <!-- Inputs -->
+        <section id="ds-inputs" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Inputs and Search</h2>
+          <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur space-y-4">
+            <div class="relative max-w-xl">
+              <input type="text" placeholder="Search documentation..." class="placeholder-white/40 outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition text-sm text-white bg-gray-950 w-full h-10 border-gray-800 border rounded-xl pr-14 pl-10" />
+              <div class="absolute left-3 inset-y-0 flex items-center pointer-events-none text-white/50">
+                <i data-lucide="search" class="w-4 h-4"></i>
+              </div>
+              <span class="absolute right-2 inset-y-0 my-auto inline-flex items-center justify-center h-7 px-2 rounded-lg text-xs bg-white/5 text-white/60">⌘K</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cards -->
+        <section id="ds-cards" class="space-y-6">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Cards and Containers</h2>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <article class="group rounded-2xl bg-gray-900/60 ring-1 ring-gray-800 overflow-hidden hover:ring-gray-700 transition">
+              <div class="aspect-[16/9] bg-black flex items-center justify-center text-white/30 text-xs font-geist-mono">16:9 Media Slot</div>
+              <div class="p-4">
+                <h3 class="text-[18px] font-semibold tracking-tight text-white">Catalog Card Specimen</h3>
+                <div class="mt-2 flex flex-wrap gap-1.5">
+                  <span class="inline-flex items-center rounded-lg bg-gray-900/70 px-2.5 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-800">tag</span>
+                  <span class="inline-flex items-center rounded-lg bg-neutral-900/70 px-2.5 py-1 text-xs font-medium text-neutral-300 ring-1 ring-inset ring-neutral-800">surface</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="relative overflow-hidden aspect-[16/9] bg-gray-900 border border-white/10 rounded-2xl p-4 flex flex-col justify-between">
+              <div class="flex justify-between items-center">
+                <span class="inline-flex items-center text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 px-2.5 backdrop-blur">Overlay Pill</span>
+                <span class="inline-flex items-center text-xs text-white/90 bg-white/10 border-white/15 border rounded-full py-1 px-3 backdrop-blur">Category</span>
+              </div>
+              <p class="text-white text-lg font-medium tracking-tight">Glass Overlay Media Card</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Timeline & Marquee -->
+        <section id="ds-timeline" class="space-y-6 pb-12">
+          <div class="flex items-center gap-2 text-white/40">
+            <span class="text-base">+</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-base">+</span>
+          </div>
+          <h2 class="text-3xl font-medium tracking-tighter text-white">Timeline and Marquee</h2>
+          <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur">
+            <div class="flex flex-col gap-4 relative text-gray-300">
+              <div class="relative">
+                <div class="absolute left-2 top-6 bottom-0 w-px bg-gradient-to-b from-emerald-400 via-indigo-400 to-purple-400"></div>
+                <div class="flex gap-4 items-start">
+                  <div class="flex-shrink-0 w-4 h-4 z-10 relative bg-gray-900 border-emerald-400 border-2 rounded-full mt-0.5">
+                    <div class="w-1.5 h-1.5 absolute top-0.5 left-0.5 bg-emerald-400 rounded-full"></div>
+                  </div>
+                  <div class="pb-4">
+                    <span class="text-sm font-medium text-emerald-300">Ut enim ad minim</span>
+                    <p class="text-xs text-gray-400 mt-1">Quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 border-indigo-400 bg-gray-900 z-10 relative mt-0.5">
+                  <div class="w-1.5 h-1.5 rounded-full bg-indigo-400 absolute top-0.5 left-0.5"></div>
+                </div>
+                <div>
+                  <span class="text-sm font-medium text-indigo-300">Duis aute irure</span>
+                  <p class="text-xs text-gray-400 mt-1">Reprehenderit in voluptate velit esse cillum dolore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    lucide.createIcons();
+    const tabOverview = document.getElementById('tab-overview');
+    const tabComponents = document.getElementById('tab-components');
+    const viewOverview = document.getElementById('view-overview');
+    const viewComponents = document.getElementById('view-components');
+
+    function syncView() {
+      const hash = location.hash || '#overview';
+      const isComponents = hash === '#components' || hash.startsWith('#ds-');
+      viewOverview.classList.toggle('hidden', isComponents);
+      viewComponents.classList.toggle('hidden', !isComponents);
+      tabOverview.classList.toggle('tab-active', !isComponents);
+      tabComponents.classList.toggle('tab-active', isComponents);
+    }
+
+    window.addEventListener('hashchange', syncView);
+    syncView();
+  </script>
+</body>
+</html>

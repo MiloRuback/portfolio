@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Milo Ruback — Portfólio de Projetos &amp; Experiência Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Portfólio de apresentação de Milo Ruback: Every Helper for Minecraft, MiloDex e Pesquisa Trimestral do Abate de Animais (IBGE), construído com Design System extraído e cena interativa por frames do Google Flow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body class="min-h-full antialiased selection:bg-white selection:text-black xl:bg-gray-950 text-white bg-gray-950">
+
+  <!-- Live WebGL Background preserved from BuildX / aura.build Design System -->
+  <div class="aura-background-component top-0 w-full h-screen -z-10 hue-rotate-15 fixed pointer-events-none">
+    <div class="aura-background-component top-0 w-full -z-10 absolute h-full">
+      <div data-us-project="vRUeei6AVOtWgmHT28mN" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+      <script type="text/javascript">
+        !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+      </script>
+    </div>
+  </div>
+
+  <!-- Ambient Glow Fallback -->
+  <div class="fixed -z-20 inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-[-12%] left-1/2 -translate-x-1/2 h-[820px] w-[1100px] rounded-full blur-3xl opacity-20" style="background: radial-gradient(900px 520px at 50% 30%, rgb(99, 102, 241) 0%, rgb(17, 24, 39) 45%, transparent 75%);"></div>
+  </div>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="sticky z-50 xl:bg-black/80 bg-black/70 border-gray-800 border-b top-0 backdrop-blur-xl [animation:fadeSlideIn_0.9s_ease-out_0.05s_both]">
+    <div class="sm:px-8 max-w-7xl mx-auto px-6 py-2">
+      <div class="flex gap-4 h-16 items-center justify-between">
+        <!-- Brand -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/15 font-geist font-semibold text-sm tracking-tight text-white group-hover:border-white/30 transition">
+            MR
+          </span>
+          <div class="leading-tight">
+            <span class="block text-sm font-medium tracking-tight text-white">Milo Ruback</span>
+            <span class="block text-[11px] font-geist-mono text-white/50">GitHub Portfolio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Navegação principal">
+          <a class="text-sm px-3 py-1.5 rounded-lg transition text-white/60 hover:text-white" href="#inicio">Início</a>
+          <a class="text-sm px-3 py-1.5 rounded-lg transition text-white/60 hover:text-white" href="#rotunda">Cena 3D</a>
+          <a class="text-sm px-3 py-1.5 rounded-lg transition text-white/60 hover:text-white" href="#projetos">Projetos</a>
+          <a class="text-sm px-3 py-1.5 rounded-lg transition text-white/60 hover:text-white" href="#sobre">Autor</a>
+          <a class="text-sm px-3 py-1.5 rounded-lg transition text-white/60 hover:text-white" href="#metodologia">Processo</a>
+        </nav>
+
+        <!-- Search (⌘K) -->
+        <div class="hidden lg:flex flex-1 max-w-xs mx-4">
+          <div class="w-full relative">
+            <input
+              id="header-search-input"
+              type="text"
+              placeholder="Buscar projeto ou stack..."
+              class="placeholder-white/40 outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition text-sm text-white bg-gray-950/90 w-full h-9 border-gray-800 border rounded-xl pr-12 pl-9 backdrop-blur"
+            />
+            <div class="absolute left-3 inset-y-0 flex items-center pointer-events-none text-white/50">
+              <i data-lucide="search" class="w-4 h-4"></i>
+            </div>
+            <span class="absolute right-2 inset-y-0 my-auto inline-flex items-center justify-center h-6 px-1.5 rounded-md text-[11px] font-geist-mono bg-white/5 text-white/60">⌘K</span>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2.5">
+          <button
+            id="header-presentation-btn"
+            class="hidden sm:inline-flex items-center gap-2 transition hover:bg-white/10 text-xs font-medium text-white/80 hover:text-white bg-black/80 h-9 border-white/10 border rounded-lg px-3.5"
+            title="Ativar tela cheia para apresentação (Tecla F)"
+          >
+            <i data-lucide="presentation" class="w-3.5 h-3.5"></i>
+            <span>Apresentar</span>
+          </button>
+
+          <a
+            href="buildx-design-system/design-system.html"
+            class="hidden sm:inline-flex btn-glow text-xs font-medium px-4 h-9"
+          >
+            <span class="label-primary">Design System</span>
+            <span class="label-hover">Abrir /extract-ds</span>
+            <span class="glow-line"></span>
+            <span class="glow-fill"></span>
+          </a>
+
+          <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-lg border h-9 w-9 transition border-white/10 bg-black text-white/70 hover:bg-white/5" aria-label="Abrir menu">
+            <i data-lucide="menu" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-white/10 bg-black/90 backdrop-blur px-6 py-4">
+      <nav class="grid grid-cols-2 gap-2.5 text-sm">
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-white/80 hover:bg-white/5" href="#inicio">Início</a>
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-white/80 hover:bg-white/5" href="#rotunda">Cena 3D</a>
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-white/80 hover:bg-white/5" href="#projetos">Projetos</a>
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-white/80 hover:bg-white/5" href="#sobre">Autor</a>
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-white/80 hover:bg-white/5" href="#metodologia">Processo</a>
+        <a class="px-3.5 py-2.5 rounded-xl border border-white/10 text-indigo-300 hover:bg-white/5" href="buildx-design-system/design-system.html">Design System</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SLIDE 01 · HERO -->
+  <section id="inicio" data-slide="1" data-slide-title="Abertura · Milo Ruback" class="sm:px-8 max-w-7xl mt-14 sm:mt-20 mx-auto mb-20 px-6">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-white/5 border-white/10 border rounded-full mb-6 px-3.5 py-1.5 backdrop-blur [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span class="text-xs text-white/75 font-geist-mono">Milo Ruback · 3 Projetos em Produção no GitHub</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl leading-[1.03] font-medium text-white tracking-tighter [animation:fadeSlideIn_0.9s_ease-out_0.2s_both]">
+          Interfaces, Aplicações &amp; Experiências Digitais.
+        </h1>
+
+        <p class="text-lg sm:text-xl leading-relaxed font-normal text-white/65 tracking-tight mt-6 max-w-2xl [animation:fadeSlideIn_0.9s_ease-out_0.3s_both]">
+          Portfólio de apresentação reunindo software desktop em Electron e WebAssembly, leitor multiplataforma integrado à API do MangaDex e visualização estatística oficial do IBGE — estruturado sobre o Design System extraído do benchmark <span class="text-white/90 font-medium">sharper-creative.aura.build</span>.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mt-9 [animation:fadeSlideIn_0.9s_ease-out_0.4s_both]">
+          <a href="#projetos" class="btn-glow px-6 py-3.5 text-sm font-medium min-w-[170px]">
+            <span class="label-primary">Explorar Projetos</span>
+            <span class="label-hover">Ver 3 Repositórios →</span>
+            <span class="glow-line"></span>
+            <span class="glow-fill"></span>
+          </a>
+
+          <a href="#rotunda" class="inline-flex items-center gap-2 transition justify-center hover:bg-white/10 hover:text-white text-sm font-normal text-white/80 bg-white/5 border-white/10 border rounded-xl px-5 py-3.5">
+            <i data-lucide="play-circle" class="w-4 h-4"></i>
+            <span>Interagir com Cena 3D (95 Frames)</span>
+          </a>
+
+          <a href="https://github.com/MiloRuback" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white px-2 py-2 transition">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>@MiloRuback</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Summary Bento Right -->
+      <div class="lg:col-span-5 [animation:fadeSlideIn_1s_ease-out_0.45s_both]">
+        <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur space-y-4">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4">
+            <div>
+              <p class="text-xs font-geist-mono text-white/50 uppercase tracking-wider">Roteiro da Apresentação</p>
+              <p class="text-base font-medium text-white mt-0.5">Visão Executiva dos Projetos</p>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 font-geist-mono">↑ ↓ Setas</span>
+          </div>
+
+          <a href="#rotunda" class="flex items-center justify-between p-3.5 rounded-2xl bg-gray-950/70 border border-white/10 hover:border-white/25 transition group">
+            <div>
+              <p class="text-xs font-geist-mono text-indigo-300">01 · Google Flow</p>
+              <p class="text-sm font-medium text-white mt-0.5">Manga Rotunda (95 Frames Interativos)</p>
+            </div>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-white/40 group-hover:text-white transition"></i>
+          </a>
+
+          <a href="#projetos" class="flex items-center justify-between p-3.5 rounded-2xl bg-gray-950/70 border border-white/10 hover:border-white/25 transition group">
+            <div>
+              <p class="text-xs font-geist-mono text-emerald-300">02 · GitHub Showcase</p>
+              <p class="text-sm font-medium text-white mt-0.5">E-Helper · MiloDex · IBGE Abate</p>
+            </div>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-white/40 group-hover:text-white transition"></i>
+          </a>
+
+          <a href="#metodologia" class="flex items-center justify-between p-3.5 rounded-2xl bg-gray-950/70 border border-white/10 hover:border-white/25 transition group">
+            <div>
+              <p class="text-xs font-geist-mono text-purple-300">03 · Fluxo da Aula</p>
+              <p class="text-sm font-medium text-white mt-0.5">aura.build → sd.asimov → /extract-ds → JSON</p>
+            </div>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-white/40 group-hover:text-white transition"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 02 · INTERACTIVE GOOGLE FLOW FRAME SCRUBBER (MANGA ROTUNDA) -->
+  <section id="rotunda" data-slide="2" data-slide-title="Google Flow · Manga Rotunda 3D" class="sm:px-8 max-w-7xl mx-auto my-28 px-6 space-y-6">
+    <div class="flex items-center gap-2 text-white/40 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+      <span class="text-base">+</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-xs font-geist-mono text-white/50 px-2">GOOGLE FLOW · PRIMEIRO → ÚLTIMO FRAME</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-base">+</span>
+    </div>
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 pb-2 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.2s_both]">
+      <div>
+        <h2 class="text-4xl sm:text-5xl font-medium text-white tracking-tighter">
+          Câmera Interativa por Frames
+        </h2>
+        <p class="text-base sm:text-lg text-white/55 mt-2 max-w-2xl">
+          Movimento contínuo de câmera gerado no Google Flow a partir do primeiro e último frame (<code class="font-geist-mono text-white/80 text-sm">Camera_moving_through_manga_rotunda_272502cd</code>), fatiado em 95 quadros WebP controlados pelo cursor.
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-show-json="rotunda" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-white/80 transition">
+          <i data-lucide="braces" class="w-3.5 h-3.5"></i>
+          <span>Ver JSON da Cena</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Interactive Frame Scrubbing Container -->
+    <div class="sm:p-6 p-4 bg-gray-900/60 border-white/10 border rounded-3xl backdrop-blur animate-on-scroll [animation:fadeSlideIn_0.9s_ease-out_0.3s_both]">
+      <div
+        id="rotunda-stage"
+        class="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 cursor-ew-resize select-none"
+      >
+        <canvas id="rotunda-canvas" class="w-full h-full object-cover block"></canvas>
+
+        <!-- Top Telemetry Overlay -->
+        <div class="absolute top-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+          <div class="inline-flex items-center gap-2 rounded-full bg-black/70 border border-white/15 backdrop-blur px-3 py-1.5 text-xs font-geist-mono text-white/90">
+            <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+            <span id="rotunda-frame-counter">Frame 01 / 95</span>
+            <span class="text-white/30">|</span>
+            <span id="rotunda-time-counter">0.00s / 7.93s</span>
+          </div>
+
+          <div class="inline-flex items-center gap-2 rounded-full bg-black/70 border border-white/15 backdrop-blur px-3 py-1.5 text-xs font-geist-mono text-white/70">
+            <span id="rotunda-cache-status">Carregando frames...</span>
+          </div>
+        </div>
+
+        <!-- Center Subtle Hint (fades out on first mouse move) -->
+        <div
+          id="rotunda-hint"
+          class="pointer-events-none absolute bottom-14 left-1/2 -translate-x-1/2 rounded-full bg-black/75 border border-white/15 backdrop-blur px-4 py-2 text-xs text-white/85 flex items-center gap-2 transition-opacity duration-500"
+        >
+          <i data-lucide="move-horizontal" class="w-3.5 h-3.5 text-indigo-300"></i>
+          <span>Passe o mouse horizontalmente sobre a cena para avançar a câmera 3D</span>
+        </div>
+
+        <!-- Bottom Progress Strip -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
+          <div id="rotunda-progress-bar" class="h-full bg-gradient-to-r from-emerald-400 via-indigo-400 to-purple-400 transition-[width] duration-75" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="mt-4 bg-gray-950/70 ring-1 ring-gray-800 rounded-2xl p-3.5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="rotunda-autoplay-btn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-medium text-white transition">
+            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+            <span id="rotunda-autoplay-label">Auto-Play</span>
+          </button>
+          <button id="rotunda-mode-mouse" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gray-900 border border-gray-800 text-xs font-medium text-emerald-300 hover:border-gray-700 transition">
+            Mouse Hover: Ativo
+          </button>
+          <div class="flex items-center gap-1.5">
+            <button data-jump-frame="0" class="px-2.5 py-2 rounded-xl bg-gray-900 border border-gray-800 hover:border-gray-700 text-xs text-white/75 hover:text-white transition">1º Frame</button>
+            <button data-jump-frame="47" class="px-2.5 py-2 rounded-xl bg-gray-900 border border-gray-800 hover:border-gray-700 text-xs text-white/75 hover:text-white transition">Rotunda</button>
+            <button data-jump-frame="94" class="px-2.5 py-2 rounded-xl bg-gray-900 border border-gray-800 hover:border-gray-700 text-xs text-white/75 hover:text-white transition">Último Frame</button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 flex-1 lg:max-w-md">
+          <span class="text-[11px] font-geist-mono text-white/50">01</span>
+          <input id="rotunda-slider" type="range" min="0" max="94" value="0" class="rotunda-slider w-full" aria-label="Selecionar frame da rotunda" />
+          <span class="text-[11px] font-geist-mono text-white/50">95</span>
+        </div>
+      </div>
+
+      <!-- First & Last Frame Comparison Strip -->
+      <div class="grid sm:grid-cols-2 gap-4 mt-4">
+        <div class="rounded-2xl bg-gray-950/60 border border-white/10 p-3 flex items-center gap-3.5">
+          <img src="assets/rotunda-frames/frame_001.webp" alt="Primeiro frame Google Flow" class="w-24 h-14 rounded-xl object-cover border border-white/10 flex-shrink-0" />
+          <div>
+            <p class="text-xs font-geist-mono text-emerald-300">PRIMEIRO FRAME · 001</p>
+            <p class="text-xs text-white/70 mt-0.5">Corredor simétrico de estantes de mangá em madeira escura com arco central.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-gray-950/60 border border-white/10 p-3 flex items-center gap-3.5">
+          <img src="assets/rotunda-frames/frame_095.webp" alt="Último frame Google Flow" class="w-24 h-14 rounded-xl object-cover border border-white/10 flex-shrink-0" />
+          <div>
+            <p class="text-xs font-geist-mono text-purple-300">ÚLTIMO FRAME · 095</p>
+            <p class="text-xs text-white/70 mt-0.5">Contra-plongée na rotunda circular de 4 andares com escada espiral e cúpula zenital.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 03 · 3 GITHUB PROJECTS CATALOG -->
+  <section id="projetos" data-slide="3" data-slide-title="Projetos GitHub · MiloRuback" class="sm:px-8 max-w-7xl mx-auto my-28 px-6 space-y-6">
+    <div class="flex items-center gap-2 text-white/40 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+      <span class="text-base">+</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-xs font-geist-mono text-white/50 px-2">REPOSITÓRIOS EXPLORADOS DO GITHUB</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-base">+</span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-2 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.2s_both]">
+      <div>
+        <h2 class="text-4xl sm:text-5xl font-medium text-white tracking-tighter">
+          Projetos Desenvolvidos
+        </h2>
+        <p class="text-base sm:text-lg text-white/55 mt-2 max-w-2xl">
+          Três aplicações reais do repositório <a href="https://github.com/MiloRuback" target="_blank" rel="noopener noreferrer" class="text-white/85 underline decoration-white/25 hover:decoration-white">github.com/MiloRuback</a>, cobrindo software desktop, mobile e visualização de dados.
+        </p>
+      </div>
+    </div>
+
+    <!-- BuildX Catalog Container -->
+    <div class="sm:p-8 p-5 bg-gray-900/60 border-white/10 border rounded-3xl backdrop-blur animate-on-scroll [animation:fadeSlideIn_0.9s_ease-out_0.3s_both]">
+      <!-- Toolbar -->
+      <div class="bg-gray-950/70 ring-gray-800 ring-1 rounded-2xl p-3 mb-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"></i>
+            <input
+              id="project-search-input"
+              type="text"
+              placeholder="Filtrar por nome, API, Electron, Android, IBGE, WebAssembly..."
+              class="text-sm placeholder-gray-500 outline-none focus:ring-1 focus:ring-gray-700 text-gray-200 bg-gray-900/70 w-full ring-gray-800 ring-1 rounded-xl py-2.5 pr-4 pl-9"
+            />
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="project-filter-chip active inline-flex ring-inset transition text-sm font-medium text-white bg-gray-900 ring-gray-700 ring-1 rounded-xl pt-2 pr-3 pb-2 pl-3 items-center whitespace-nowrap cursor-pointer" data-filter="all">Todos (3)</button>
+            <button class="project-filter-chip inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium ring-1 ring-inset transition bg-gray-900/50 text-gray-300 ring-gray-800 hover:text-white whitespace-nowrap cursor-pointer" data-filter="desktop">Desktop / Electron</button>
+            <button class="project-filter-chip inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium ring-1 ring-inset transition bg-gray-900/50 text-gray-300 ring-gray-800 hover:text-white whitespace-nowrap cursor-pointer" data-filter="mobile">Desktop &amp; Android</button>
+            <button class="project-filter-chip inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium ring-1 ring-inset transition bg-gray-900/50 text-gray-300 ring-gray-800 hover:text-white whitespace-nowrap cursor-pointer" data-filter="data">Dados &amp; IBGE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-5"></div>
+
+      <div class="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p id="projects-count-label" class="text-sm text-gray-400">Exibindo 3 de 3 projetos em produção</p>
+        <p class="text-xs font-geist-mono text-white/50">Clique em "Explorar arquitetura" em qualquer card para abrir o detalhamento técnico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 04 · DEEP DIVE SPOTLIGHT + TIMELINE + RESERVED PORTRAIT -->
+  <section id="sobre" data-slide="4" data-slide-title="Sobre Milo Ruback &amp; Trajetória" class="sm:px-8 max-w-7xl mx-auto my-28 px-6 space-y-6">
+    <div class="flex items-center gap-2 text-white/40 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+      <span class="text-base">+</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-xs font-geist-mono text-white/50 px-2">IDENTIDADE &amp; ESPAÇO RESERVADO PARA RETRATO</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-base">+</span>
+    </div>
+
+    <div class="sm:p-8 p-6 bg-gray-900/60 border-white/10 border rounded-3xl backdrop-blur animate-on-scroll [animation:fadeSlideIn_0.9s_ease-out_0.25s_both]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        <!-- Left: Bio & Gradient Timeline -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div>
+            <span class="text-sm font-normal text-gray-400">Desenvolvedor &amp; Criador</span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl leading-[0.95] text-white tracking-tighter mt-2">
+              Milo Ruback
+            </h2>
+            <p class="text-base text-white/65 mt-4 leading-relaxed max-w-xl">
+              Desenvolvimento de ferramentas desktop nativas, aplicativos multiplataforma integrados a APIs REST e painéis analíticos orientados à apresentação de dados reais.
+            </p>
+
+            <!-- BuildX Vertical Gradient Timeline -->
+            <div class="mt-8 relative">
+              <div class="flex flex-col gap-4 relative text-gray-300">
+                <div class="relative">
+                  <div class="absolute left-2 top-8 bottom-0 w-px bg-gradient-to-b from-emerald-400 via-indigo-400 to-purple-400"></div>
+                  <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-4 h-4 z-10 relative bg-gray-900 border-emerald-400 border-2 rounded-full mt-0.5">
+                      <div class="w-1.5 h-1.5 absolute top-0.5 left-0.5 bg-emerald-400 rounded-full"></div>
+                    </div>
+                    <div class="flex-1 pb-5">
+                      <span class="text-sm font-medium text-emerald-300">Every Helper for Minecraft</span>
+                      <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                        Electron 43, React, TypeScript, editor de skins 64×64 com <code>skinview3d</code>, Seed Map em <code>cubiomes.wasm</code>, parser de mundos <code>.mca</code>/<code>level.dat</code> e nuvem com Supabase RLS.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <div class="absolute left-2 top-8 bottom-0 w-px bg-gradient-to-b from-indigo-400 to-purple-400"></div>
+                  <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 border-indigo-400 bg-gray-900 z-10 relative mt-0.5">
+                      <div class="w-1.5 h-1.5 rounded-full bg-indigo-400 absolute top-0.5 left-0.5"></div>
+                    </div>
+                    <div class="flex-1 pb-5">
+                      <span class="text-sm font-medium text-indigo-300">MiloDex (Desktop &amp; Android)</span>
+                      <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                        Leitor integrado à MangaDex REST API com modos RTL/LTR/Scroll, exportação CBZ via JSZip, banco <code>sql.js</code>, build Windows NSIS e APK Android via Capacitor 8.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 border-purple-400 bg-gray-900 z-10 relative mt-0.5">
+                      <div class="w-1.5 h-1.5 rounded-full bg-purple-400 absolute top-0.5 left-0.5"></div>
+                    </div>
+                    <div class="flex-1">
+                      <span class="text-sm font-medium text-purple-300">Pesquisa Trimestral do Abate — IBGE</span>
+                      <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                        Visualização interativa da série 2016–2025 com Chart.js, recordes de 2025, comparativos trimestrais, tabela YoY e modo de apresentação em tela cheia.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://github.com/MiloRuback" target="_blank" rel="noopener noreferrer" class="btn-glow px-5 py-3 text-sm font-medium">
+              <span class="label-primary">Perfil no GitHub</span>
+              <span class="label-hover">github.com/MiloRuback</span>
+              <span class="glow-line"></span>
+              <span class="glow-fill"></span>
+            </a>
+            <button data-show-json="portrait" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-white/80 transition">
+              <i data-lucide="file-json" class="w-4 h-4"></i>
+              <span>JSON de Direção de Arte (Retrato)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Reserved Portrait Slot (per user request: no photo yet, keep dedicated space) -->
+        <div class="lg:col-span-5 flex flex-col">
+          <div class="relative flex-1 min-h-[420px] rounded-2xl border border-dashed border-white/20 bg-gray-950/70 overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+            <img id="portrait-preview-img" src="" alt="Prévia do retrato de Milo Ruback" class="hidden absolute inset-0 w-full h-full object-cover" />
+
+            <!-- Top overlay badges -->
+            <div class="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-geist-mono text-white/85 bg-black/70 border border-white/15 rounded-full py-1 px-2.5 backdrop-blur">
+                <i data-lucide="user" class="w-3 h-3"></i>
+                Retrato · 4:5
+              </span>
+              <span class="inline-flex items-center text-[11px] font-geist-mono text-amber-200/90 bg-black/70 border border-white/15 rounded-full py-1 px-2.5 backdrop-blur">
+                Espaço Reservado
+              </span>
+            </div>
+
+            <!-- Placeholder Content -->
+            <div id="portrait-placeholder-content" class="relative z-10 max-w-xs space-y-4">
+              <div class="w-24 h-24 mx-auto rounded-full bg-white/5 border border-white/15 flex items-center justify-center shadow-inner">
+                <span class="text-2xl font-medium tracking-tight text-white/85 font-geist">MR</span>
+              </div>
+              <div>
+                <p class="text-base font-medium text-white">Foto de Milo Ruback</p>
+                <p class="text-xs text-white/55 mt-1 leading-relaxed">
+                  Espaço reservado para o retrato editorial tratado via JSON de direção de arte (Prompt A / Prompt B), preservando identidade e estética escura do site.
+                </p>
+              </div>
+              <div class="pt-2 flex flex-col items-center gap-2">
+                <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-xs font-medium text-white transition">
+                  <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+                  <span>Testar foto local na apresentação</span>
+                  <input id="portrait-file-input" type="file" accept="image/*" class="hidden" />
+                </label>
+                <span class="text-[11px] font-geist-mono text-white/40">Recomendado: 800×1000px · Fundo escuro</span>
+              </div>
+            </div>
+
+            <button id="portrait-clear-btn" class="hidden absolute bottom-3 right-3 z-20 px-3 py-1.5 rounded-xl bg-black/80 border border-white/15 text-xs text-white/80 hover:text-white backdrop-blur transition">
+              Restaurar espaço reservado
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 05 · GALLERY MARQUEE (REAL PROJECT SCREENS + ROTUNDA) -->
+  <section data-slide="5" data-slide-title="Galeria Visual dos Projetos" class="sm:px-8 max-w-7xl mx-auto my-28 px-6 space-y-6">
+    <div class="flex items-center gap-2 text-white/40 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+      <span class="text-base">+</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-xs font-geist-mono text-white/50 px-2">CAPTURAS REAIS &amp; FRAMES</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-base">+</span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div>
+        <h2 class="text-4xl sm:text-5xl font-medium text-white tracking-tighter">Galeria em Movimento</h2>
+        <p class="text-base sm:text-lg text-white/55 mt-2">Telas capturadas diretamente dos repositórios de Milo Ruback e quadros-chave da rotunda.</p>
+      </div>
+    </div>
+
+    <div class="relative mt-6 overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+      <div class="flex w-max marquee-track gap-4">
+        <!-- Set A -->
+        <div class="flex gap-4 flex-shrink-0">
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/seed-map.png" alt="Every Helper Seed Map" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/skin-library.png" alt="Every Helper Skin Studio" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/ibge-abate-preview.png" alt="IBGE Pesquisa Trimestral do Abate" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/world-map.png" alt="Every Helper World Map" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/rotunda-frames/frame_001.webp" alt="Manga Rotunda Frame 01" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/rotunda-frames/frame_095.webp" alt="Manga Rotunda Frame 95" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <!-- Set B (duplicate for seamless loop) -->
+        <div class="flex gap-4 flex-shrink-0" aria-hidden="true">
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/seed-map.png" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/skin-library.png" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/ibge-abate-preview.png" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/projects/world-map.png" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/rotunda-frames/frame_001.webp" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-80 h-48 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-gray-900">
+            <img src="assets/rotunda-frames/frame_095.webp" alt="" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 06 · METHODOLOGY, BENCHMARK REFERENCE & EXTRACT-DS -->
+  <section id="metodologia" data-slide="6" data-slide-title="Metodologia &amp; Referências" class="sm:px-8 max-w-7xl mx-auto my-28 px-6 space-y-6">
+    <div class="flex items-center gap-2 text-white/40 animate-on-scroll [animation:fadeSlideIn_0.8s_ease-out_0.1s_both]">
+      <span class="text-base">+</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-xs font-geist-mono text-white/50 px-2">DA REFERÊNCIA VISUAL À EXPERIÊNCIA DIGITAL</span>
+      <div class="h-px flex-1 bg-white/10"></div>
+      <span class="text-base">+</span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
+      <div>
+        <h2 class="text-4xl sm:text-5xl font-medium text-white tracking-tighter">Fluxo &amp; Recursos Aplicados</h2>
+        <p class="text-base sm:text-lg text-white/55 mt-2 max-w-2xl">
+          Todos os artefatos da aula prática preservados e versionados no repositório do GitHub.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur flex flex-col justify-between space-y-4">
+        <div>
+          <span class="text-xs font-geist-mono text-emerald-300">01 · BENCHMARK &amp; CAPTURA</span>
+          <h3 class="text-xl font-medium tracking-tight text-white mt-2">aura.build + sd.asimov.academy</h3>
+          <p class="text-sm text-white/60 mt-2 leading-relaxed">
+            Referência visual escolhida em <code class="font-geist-mono text-white/80">sharper-creative.aura.build</code> e capturada em HTML local via Website Downloader 3.0.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="https://sharper-creative.aura.build/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-white transition">Link Original</a>
+          <a href="reference/sharper-creative.aura.build/index.html" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-white/80 transition">Cópia Local</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur flex flex-col justify-between space-y-4">
+        <div>
+          <span class="text-xs font-geist-mono text-indigo-300">02 · SKILL EXTRACT-DS</span>
+          <h3 class="text-xl font-medium tracking-tight text-white mt-2">Design System Extraído</h3>
+          <p class="text-sm text-white/60 mt-2 leading-relaxed">
+            Skill oficial <code class="font-geist-mono text-white/80">rtadewald/skills/extract-ds</code> instalada exatamente como no repositório, gerando Overview e Components reutilizáveis.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="buildx-design-system/design-system.html" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-white transition">Abrir Catálogo DS</a>
+          <a href="https://github.com/rtadewald/skills/tree/main/extract-ds" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-white/80 transition">Repo da Skill</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-gray-900/60 border border-white/10 p-6 backdrop-blur flex flex-col justify-between space-y-4">
+        <div>
+          <span class="text-xs font-geist-mono text-purple-300">03 · GOOGLE FLOW &amp; JSON</span>
+          <h3 class="text-xl font-medium tracking-tight text-white mt-2">Vídeo em Frames + Direção de Arte</h3>
+          <p class="text-sm text-white/60 mt-2 leading-relaxed">
+            Vídeo <code class="font-geist-mono text-white/80">Camera_moving_through_manga_rotunda_272502cd</code> fatiado em 95 frames WebP e especificações em JSON para cena e retrato.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="#rotunda" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-white transition">Ver Palco Interativo</a>
+          <button data-show-json="rotunda" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-white/80 transition">Spec JSON</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sm:px-8 border-white/10 border-t mt-32 pt-14 pb-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h5 class="text-xs uppercase tracking-wider font-medium mb-4 text-white/80">Portfólio</h5>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li><a class="hover:text-white transition" href="#inicio">Início</a></li>
+            <li><a class="hover:text-white transition" href="#rotunda">Cena 3D (Google Flow)</a></li>
+            <li><a class="hover:text-white transition" href="#projetos">Projetos GitHub</a></li>
+            <li><a class="hover:text-white transition" href="#sobre">Sobre Milo Ruback</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-xs uppercase tracking-wider font-medium mb-4 text-white/80">Repositórios</h5>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li><a class="hover:text-white transition" target="_blank" rel="noopener noreferrer" href="https://github.com/MiloRuback/E-Helper-for-Minecraft">E-Helper-for-Minecraft</a></li>
+            <li><a class="hover:text-white transition" target="_blank" rel="noopener noreferrer" href="https://github.com/MiloRuback/MiloDex">MiloDex</a></li>
+            <li><a class="hover:text-white transition" target="_blank" rel="noopener noreferrer" href="https://github.com/MiloRuback/Pesquisa-Abate-Trimestral-de-Animais">Pesquisa Abate IBGE</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-xs uppercase tracking-wider font-medium mb-4 text-white/80">Design System &amp; Skill</h5>
+          <ul class="space-y-2.5 text-sm text-white/65">
+            <li><a class="hover:text-white transition" href="buildx-design-system/design-system.html#overview">Overview (BuildX DS)</a></li>
+            <li><a class="hover:text-white transition" href="buildx-design-system/design-system.html#components">Components (BuildX DS)</a></li>
+            <li><a class="hover:text-white transition" href="reference/sharper-creative.aura.build/index.html">Benchmark aura.build (Local)</a></li>
+            <li><a class="hover:text-white transition" target="_blank" rel="noopener noreferrer" href="https://github.com/rtadewald/skills/tree/main/extract-ds">Skill /extract-ds</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-xs uppercase tracking-wider font-medium mb-4 text-white/80">Atalhos de Apresentação</h5>
+          <ul class="space-y-2 text-xs font-geist-mono text-white/60">
+            <li>← / → : Trocar seção</li>
+            <li>Espaço : Auto-play da Rotunda</li>
+            <li>F : Modo Tela Cheia</li>
+            <li>⌘K / Ctrl+K : Buscar projeto</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4 text-sm text-white/60">
+          <span class="font-medium text-white">Milo Ruback</span>
+          <span class="text-white/20">|</span>
+          <span>© 2026 · Portfólio de Apresentação</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <a aria-label="GitHub de Milo Ruback" href="https://github.com/MiloRuback" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 w-10 items-center justify-center rounded-xl transition bg-white/5 text-white/75 hover:text-white hover:bg-white/10 border border-white/10">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Presentation Dock -->
+  <div class="fixed bottom-5 right-5 z-40 flex items-center gap-1.5 rounded-2xl bg-black/80 border border-white/15 backdrop-blur-xl px-2.5 py-2 shadow-2xl">
+    <button id="slide-prev-btn" class="w-8 h-8 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/75 hover:text-white transition" title="Seção anterior (←)" aria-label="Seção anterior">
+      <i data-lucide="chevron-left" class="w-4 h-4"></i>
+    </button>
+    <div class="px-2.5 text-center">
+      <span id="slide-indicator" class="block text-[11px] font-geist-mono text-white">01 / 06</span>
+      <span id="slide-title-hud" class="hidden sm:block text-[10px] text-white/50 max-w-[160px] truncate">Abertura · Milo Ruback</span>
+    </div>
+    <button id="slide-next-btn" class="w-8 h-8 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/75 hover:text-white transition" title="Próxima seção (→)" aria-label="Próxima seção">
+      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+    </button>
+    <div class="w-px h-5 bg-white/15 mx-0.5"></div>
+    <button id="presentation-fs-btn" class="w-8 h-8 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-white/75 hover:text-white transition" title="Tela cheia (Tecla F)" aria-label="Alternar tela cheia">
+      <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+    </button>
+  </div>
+
+  <!-- Project Architecture Modal -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md p-4 sm:p-8 overflow-y-auto flex items-center justify-center">
+    <div class="w-full max-w-5xl rounded-3xl bg-gray-950 border border-white/15 p-6 sm:p-8 shadow-2xl my-auto">
+      <div id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- JSON Art Direction Modal -->
+  <div id="json-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center">
+    <div class="w-full max-w-2xl rounded-3xl bg-gray-950 border border-white/15 p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h3 id="json-modal-title" class="text-base font-medium text-white">JSON de Direção de Arte</h3>
+        <button id="close-json-modal" class="w-8 h-8 rounded-xl bg-white/5 hover:bg-white/15 text-white/70 hover:text-white flex items-center justify-center" aria-label="Fechar JSON">✕</button>
+      </div>
+      <pre id="json-modal-code" class="text-xs font-geist-mono text-emerald-200 bg-black/70 border border-white/10 rounded-2xl p-4 overflow-x-auto max-h-[60vh]"></pre>
+    </div>
+  </div>
+
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

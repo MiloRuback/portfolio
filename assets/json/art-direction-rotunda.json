@@ -1,0 +1,34 @@
+{
+  "asset": "Camera_moving_through_manga_rotunda_272502cd.mp4",
+  "ferramenta": "Google Flow (transição entre primeiro e último frame)",
+  "resolucao": "1280x720",
+  "duracao_segundos": 7.93,
+  "fps_original": 24,
+  "frames_extraidos": 95,
+  "direcao_de_arte": {
+    "estilo": "cinematografia arquitetônica realista em biblioteca rotunda monumental",
+    "paleta": ["madeira nobre escura", "âmbar quente das luminárias", "mármore claro no piso central", "luz natural difusa da cúpula"],
+    "primeiro_frame": {
+      "arquivo": "assets/rotunda-frames/frame_001.webp",
+      "observavel": {
+        "cenario": "corredor simétrico ladeado por estantes altas de madeira repletas de volumes e mangás, escada deslizante de madeira à esquerda, piso em tábuas corridas",
+        "ponto_focal": "arco central em madeira esculpida revelando a rotunda circular ao fundo com mesa octogonal e balcão superior",
+        "iluminacao": "arandelas quentes laterais e luminária pendente esférica no centro do arco",
+        "enquadramento": "plano aberto simétrico em altura ocular com profundidade central"
+      }
+    },
+    "ultimo_frame": {
+      "arquivo": "assets/rotunda-frames/frame_095.webp",
+      "observavel": {
+        "cenario": "interior de rotunda circular com quatro andares de galerias e balaustradas de madeira, escada em espiral à esquerda conectando os níveis",
+        "ponto_focal": "claraboia envidraçada circular no topo irradiando luz fria diurna sobre a madeira quente",
+        "iluminacao": "contraste entre luz natural zenital difusa da cúpula e pontos quentes de iluminação nas galerias",
+        "enquadramento": "contra-plongée acentuado enfatizando escala vertical e movimento contínuo de câmera"
+      }
+    }
+  },
+  "interacao_web": {
+    "tecnica": "sequência de 95 frames WebP controlada por posição horizontal do mouse (mousemove), arraste tátil, rolagem e controles de apresentação",
+    "inspiracao": "modelo interativo por frames apresentado em aula"
+  }
+}

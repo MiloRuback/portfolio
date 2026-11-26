@@ -1,0 +1,17 @@
+{
+  "estilo": "retrato editorial tech minimalista sobre fundo escuro",
+  "sujeito": "Milo Ruback",
+  "figurino": "jaqueta ou suéter escuro minimalista sem estampas chamativas",
+  "pose": "enquadramento de ombros para cima, postura confiante e natural, leve rotação de 15 graus",
+  "expressao": "olhar atento e sereno voltado para a câmera",
+  "ambiente": "estúdio escuro com profundidade suave (#030712) e reflexo sutil de tela ou luz fria lateral",
+  "iluminacao": "key light suave quente à esquerda e rim light azul-índigo discreto à direita",
+  "enquadramento": "retrato vertical 4:5 com espaço negativo superior para composição em card glassmórfico",
+  "restricoes": [
+    "preservar identidade",
+    "mãos e proporções naturais",
+    "sem texto ou marcas d'água",
+    "coerência visual com o Design System BuildX (dark obsidian + glassmorphism)"
+  ],
+  "observacao": "Espaço reservado no portfólio aguardando a fotografia definitiva de Milo Ruback."
+}
